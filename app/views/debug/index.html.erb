@@ -1,0 +1,11 @@
+<h1>Debug#index</h1>
+
+<%= form_tag("/", method: "post", class: "ui form") do %>
+	<div class="field">
+  		<input type="text" name='id' value="<%= @data['input'] %>" />
+  	</div>
+  	<button class="ui primary button" type="submit" >get info</button>
+<% end %>
+<hr>
+<%= debug(@data['response']) %>
+<%= debug(@data['request']) %>
