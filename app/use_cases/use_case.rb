@@ -1,5 +1,3 @@
-require 'active_support/concern'
-
 module UseCase
   extend ActiveSupport::Concern
   include ActiveModel::Validations

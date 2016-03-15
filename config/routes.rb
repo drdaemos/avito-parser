@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
-  get '/' => 'debug#index'
-  post '/' => 'debug#index'
+
+  get '/' => 'debug#categories'
+  post '/' => 'debug#categories'
+
+  get 'categories' => 'debug#categories'
+  get 'categories/:id' => 'debug#category'
+  get 'items/:id' => 'debug#item'
+  get 'items' => 'debug#items'
+  get 'params/:id' => 'debug#search_params'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'debug#index'
+  root 'debug#categories'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
